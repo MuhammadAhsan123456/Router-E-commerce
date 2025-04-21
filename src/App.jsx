@@ -8,25 +8,35 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+import Product from "./components/Product";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <Home/>
+    },
+    {
+      path: '/about',
+      element: <About/>
+    },
+    {
+      path: '/services',
+      element: <Services/>
+    },
+    {
+      path: '/contact',
+      element: <Contact/>
+    },
+    {
+      path: '/product',
+      element: <Product/>
+    }
+  ],
   {
-    path: '/',
-    element: <Home/>
-  },
-  {
-    path: '/about',
-    element: <About/>
-  },
-  {
-    path: '/services',
-    element: <Services/>
-  },
-  {
-    path: '/contact',
-    element: <Contact/>
+    basename: '/Router-E-commerce'
   }
-])
+)
 
 function App() {
 
